@@ -59,3 +59,12 @@ nest generate module prisma
 ```bash
 nest g s prisma
 ```
+
+```bash
+npm run start:dev
+
+```
+
+```bash
+nest generate resource products
+```
