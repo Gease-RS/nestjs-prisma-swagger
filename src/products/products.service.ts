@@ -19,6 +19,10 @@ export class ProductsService {
     return this.prisma.product.findUnique({ where: { id: id } });
   }
 
+  findDrafts() {
+    return this.prisma.product.findMany({ where: { published: false } });
+  }
+
   update(id: string, updateProductDto: UpdateProductDto) {
     return this.prisma.product.update({
       where: { id: id },
